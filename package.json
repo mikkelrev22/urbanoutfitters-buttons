@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "build": "webpack -d --watch",
-    "seed": "node db/seed.js"
+    "seed": "node db/seed.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,13 @@
     "nodemon": "^1.19.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "jest": "^24.8.0",
+
     "underscore": "^1.8.3"
+  },
+  "jest": {
+    "setupFiles": ["./src/setupTests.js"]
   }
 }
