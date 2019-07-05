@@ -29,20 +29,22 @@
     "axios": "^0.17.1",
     "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "express": "^4.15.4",
+    "jest": "^24.8.0",
     "moment": "^2.19.2",
     "mongoose": "^4.11.6",
     "mysql": "^2.14.1",
     "nodemon": "^1.19.1",
-    "react": "^15.6.1",
+    "react": "^15.6.2",
     "react-dom": "^15.6.1",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "jest": "^24.8.0",
-
+    "react-motion": "^0.5.2",
     "underscore": "^1.8.3"
   },
   "jest": {
-    "setupFiles": ["./src/setupTests.js"]
+    "setupFiles": [
+      "./src/setupTests.js"
+    ]
   }
 }
