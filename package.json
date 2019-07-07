@@ -1,5 +1,5 @@
 {
-  "name": "urbanoutfitters-buttons",
+  "name": "react-testing",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,42 +9,37 @@
     "seed": "node db/seed.js",
     "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/loud-neighborzzz/urbanoutfitters-buttons.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/loud-neighborzzz/urbanoutfitters-buttons/issues"
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.2",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.23.0",
-    "webpack": "^2.2.1"
-  },
-  "dependencies": {
     "axios": "^0.17.1",
     "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
-    "express": "^4.15.4",
     "jest": "^24.8.0",
     "moment": "^2.19.2",
     "mongoose": "^4.11.6",
     "mysql": "^2.14.1",
     "nodemon": "^1.19.1",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.1",
-    "react-motion": "^0.5.2",
-    "underscore": "^1.8.3"
+    "react-hot-loader": "^4.12.1",
+    "react-test-renderer": "^16.8.6",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
   },
   "jest": {
     "setupFiles": [
-      "./src/setupTests.js"
+      "./client/src/setupTests.js"
     ]
   }
 }

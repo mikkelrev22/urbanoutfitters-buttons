@@ -5,3 +5,13 @@
     width: 650px;
     height: 120px;
   } 
+
+.container > * {
+  display: inline-block;
+}
+
+.afterPay {
+  font: 1.1rem/1.36 helvetica,arial,sans-serif;
+  letter-spacing: .04rem;
+  color: #767676;
+}
