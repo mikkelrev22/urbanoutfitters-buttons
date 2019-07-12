@@ -3,7 +3,7 @@
     position: absolute;
     right: 1px;
     width: 650px;
-    height: 800px;
+    height: 1500px;
     margin-right: 50px;
 } 
 
@@ -86,8 +86,30 @@
   border: 1px solid black;
 }
 
+/* .colorCont {
+
+} */
+
 .color {
+  margin: 0 5px 5px 0;
+  border-radius: 50%;
+  border-color: grey;
+  height: 22px;
+  width: 22px;
   float: left;
+}
+
+.color:hover {
+  border: 1px solid black;
+}
+
+.colors > * {
+  display: inline-block;
+}
+
+.wordColorPlace {
+  font-size: 15px;
+  color: #767676;
 }
 
 .sizeGuideCont {
@@ -97,15 +119,6 @@
 .sizeGuide {
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
-  color: #767676;
-}
-
-.colors > * {
-  display: inline-block;
-}
-
-.wordColorPlace {
-  font-size: 15px;
   color: #767676;
 }
 
@@ -164,4 +177,8 @@
 
 .addButtonCont {
   margin-top: 30px;
+}
+
+.accordion{
+  margin-top:50px;
 }

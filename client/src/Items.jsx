@@ -1,6 +1,7 @@
 import React from "react";
 import Colors from "./Colors.jsx";
 import Sizes from "./Sizes.jsx";
+import { Button, Accordion, Card } from 'react-bootstrap';
 
 const Items = (props) => {
   return (
@@ -12,9 +13,8 @@ const Items = (props) => {
                 <p className="words"> {item.name} </p>
                 <p className="words"> {item.price}</p>
                 <div className="AP"> 
-                  <p className="afterPay"> Available on orders $35.00–$1,000.00 by </p>
-                  {/* <button className="APimage"> <img src="https://theme.zdassets.com/theme_assets/605518/8174f9dafeeca2bfc64a4eda91d256aafcc9f0c0.png"></img></button> */}
-                  <input className="APimage" type="image" src="https://theme.zdassets.com/theme_assets/605518/8174f9dafeeca2bfc64a4eda91d256aafcc9f0c0.png" />
+                  <p className="afterPay"> Available on orders $35.00–$1,000.00 by afterPay</p>
+                  {/* <input className="APimage" type="image" src="https://kmd-assets.imgix.net/gene-cms/a/p/ap-rgb-sm4x-100_1.jpg?auto=format&fit=crop&q=30&dpr=2&ixlib=imgixjs-3.3.2" /> */}
                 </div>
                 <div className="stars">&#9733; &#9733; &#9733; &#9733; &#9733; 4.7 | 34 Reviews</div>
                 <div className="colors">
@@ -45,8 +45,27 @@ const Items = (props) => {
                 <div className="shipToMe" > <button className="shipToMeButt"> </button> Ship to Me </div>
                 <div className="inStorePickUp" > <button className="inStorePickUpButt"> </button> In-Store Pickup </div>
                 <div className="addButtonCont"> <button className="addToBag"> Add to Bag </button> </div>
-                <p className="details"> Details: {item.description}</p>
-                <p className="shipReturns"> shipping + returns </p>
+
+                <Accordion className="accordion" defaultActiveKey="0">
+                  <Card>
+                    <Accordion.Toggle as={Card.Header} eventKey="0">
+                      Details
+                    </Accordion.Toggle>
+                    <Accordion.Collapse eventKey="0">
+                      <Card.Body>{item.description}</Card.Body>
+                    </Accordion.Collapse>
+                  </Card>
+                  <Card>
+                    <Accordion.Toggle as={Card.Header} eventKey="1">
+                      Shipping + Returns
+                    </Accordion.Toggle>
+                    <Accordion.Collapse eventKey="1">
+                      <Card.Body>Free pre-paid returns and exchanges for orders shipped to the US. Get refunded faster with easy online returns and print a FREE pre-paid return SmartLabel® online! Return or exchange any unused or defective merchandise by mail or at one of our US or Canada store locations. Made to order items cannot be canceled, exchanged or returned.
+                        Visit Returns + Exchanges for more information on completing a return.
+                      </Card.Body>
+                    </Accordion.Collapse>
+                  </Card>
+                </Accordion>
             </div>
           )
         })

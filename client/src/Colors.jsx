@@ -7,7 +7,7 @@ const Colors = (props) => {
         props.colors.map((color, i) => {
           return (
             <div className="colorCont" key={i}>
-              <button className="color">{color}</button>
+              <button className="color"></button>
               {console.log(color)}
             </div>
           )
