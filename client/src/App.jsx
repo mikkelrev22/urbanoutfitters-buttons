@@ -10,15 +10,17 @@ class App extends React.Component {
         id: '',
         name: '',
         price: '',
-        sizes: '',
-        colors: '',
+        sizes: [],
+        colors: [],
         description: ''
       }
       this.getItem =  this.getItem.bind(this);
     }
 
     getItem () {
-      axios.get('/data')
+      // let url = parseInt(window.location.pathname.slice(1), 10);
+      //axios.get(`/data/${url}`)
+      axios.get('/data/10')
       .then((response) => {
         console.log(response.data);
         this.setState({
@@ -34,7 +36,7 @@ class App extends React.Component {
     render() {
       return (
         <div>
-          <Items data={this.state.data} />   
+          <Items data={this.state.data} /> 
         </div>
       )
     }

@@ -1,28 +1,35 @@
 import React from "react";
+import Colors from "./Colors.jsx";
+import Sizes from "./Sizes.jsx";
 
 const Items = (props) => {
   return (
     <div>
       {
         props.data.map((item, i) => {
-          return (
+          return ( 
             <div className="all" key={i} id={`${item.id}`}>
-                <div className="words">
-                    <p> {item.name} </p>
-                    <p> {item.price} </p>
+                <p className="words"> {item.name} </p>
+                <p className="words"> {item.price}</p>
+                <div className="AP"> 
+                  <p className="afterPay"> Available on orders $35.00–$1,000.00 by </p>
+                  {/* <button className="APimage"> <img src="https://theme.zdassets.com/theme_assets/605518/8174f9dafeeca2bfc64a4eda91d256aafcc9f0c0.png"></img></button> */}
+                  <input className="APimage" type="image" src="https://theme.zdassets.com/theme_assets/605518/8174f9dafeeca2bfc64a4eda91d256aafcc9f0c0.png" />
                 </div>
-                <p className="afterPay">Available on orders $35.00–$1,000.00 by AfterPay</p>
                 <div className="stars">&#9733; &#9733; &#9733; &#9733; &#9733; 4.7 | 34 Reviews</div>
-                <div className="color"> <button> {item.colors} </button>  </div>
-                <div className="color"> <button> {item.sizes} </button>  </div>
-                <div className="container">
-                    <a href="https://cdn.shopify.com/s/files/1/1230/9232/files/Size_Chart_General_47015b27-860c-43f3-b2aa-0c701038dbe5.png?9407381415185995239">Size Guide</a> 
-                    <p>|</p>
-                    <a href="http://www.yahoo.com">Customers Say: True to Size</a> 
+                <div className="colors">
+                  <p className="wordColor">Color: </p>
+                  <p className="wordColorPlace"> placeholder for color </p>
                 </div>
-                <div className="qty">
-                    <p>Qty:</p>
-                    <select className="qty">
+                <Colors colors={item.colors}/>
+                <p className="wordSize">Size:</p>
+                <Sizes sizes={item.sizes}/>
+                <div className="sizeGuideCont">
+                    <a className="sizeGuide" href="https://cdn.shopify.com/s/files/1/1230/9232/files/Size_Chart_General_47015b27-860c-43f3-b2aa-0c701038dbe5.png?9407381415185995239">Size Guides</a>
+                </div>
+                <div className="qtyCont">
+                    <p className="qty">Qty:</p>
+                    <select className="qtyOptions">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -35,13 +42,11 @@ const Items = (props) => {
                     <option value="10">10</option>
                     </select>
                 </div>
-                <div className="shipping">
-                    <button>Ship to Me</button>
-                    <button>In-Store Pickup</button>
-                </div>
-                <button > ADD TO BAG </button>
-                <p> Details: {item.description}</p>
-                <p> shipping + returns </p>
+                <div className="shipToMe" > <button className="shipToMeButt"> </button> Ship to Me </div>
+                <div className="inStorePickUp" > <button className="inStorePickUpButt"> </button> In-Store Pickup </div>
+                <div className="addButtonCont"> <button className="addToBag"> Add to Bag </button> </div>
+                <p className="details"> Details: {item.description}</p>
+                <p className="shipReturns"> shipping + returns </p>
             </div>
           )
         })

@@ -4,9 +4,12 @@ const Colors = (props) => {
   return (
     <div>
       {
-        props.data.map((item, i) => {
+        props.colors.map((color, i) => {
           return (
-
+            <div className="colorCont" key={i}>
+              <button className="color">{color}</button>
+              {console.log(color)}
+            </div>
           )
         })
       }
@@ -14,8 +17,7 @@ const Colors = (props) => {
   )
 }
 
-
-
+// style={`background-color:${props.color}`}
 
 export default Colors;
 

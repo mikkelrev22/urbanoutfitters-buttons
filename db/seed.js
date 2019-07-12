@@ -104,7 +104,6 @@ let randomElement = function(array){
     'Auguedonec vulputate varius. Lacus mattisaliquam elementumvestibulum netus cubilia inceptos facilisi, purus vehicula. Rhoncusnulla nascetur consecteturetiam erat. Duis senectus semper sedut felis. Nisletiam facilisi at facilisi imperdietnunc orci, habitasse loremmorbi. Nec nullafusce tincidunt sapiendonec. Consequatvestibulum nulla elitcras nunc. Orci in hendrerit etnullam nequealiquam.',
   ];
   
-  
   let random = function (id){
     return obj = { 
       id: id,
@@ -124,6 +123,12 @@ let randomElement = function(array){
     return arr;
   };
 
+  // const options = {
+  //   size: '',
+  //   color: '',
+  //   qty: 1
+  // }
+
 const insertItems = function() {
     const items = fillArray();
     const promises = [];
@@ -132,6 +137,8 @@ const insertItems = function() {
     };
     Promise.all(promises).then(() => db.disconnect());
 };
+
+
 
 insertItems();
 

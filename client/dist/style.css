@@ -1,17 +1,167 @@
 .all {
-    margin-top: 180px;
+    margin-top: 130px;
     position: absolute;
     right: 1px;
     width: 650px;
-    height: 120px;
-  } 
+    height: 800px;
+    margin-right: 50px;
+} 
 
-.container > * {
+.sizeGuideCont {
+  margin-top: 70px;
+}
+
+.AP > * {
   display: inline-block;
 }
 
 .afterPay {
+  margin-top: 5px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #767676;
+}
+
+.words{
+  margin-bottom: 10px;
+  font: lighter 1.8rem/1.15 helvetica,arial,sans-serif;
+  font-size: 23px;
+  letter-spacing: .02rem;
+  text-align: center;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  padding: 0;
+  text-decoration: none;
+  text-align: left;
+}
+
+.APCont {
+  height: 1000px;
+  width: 40px;
+}
+
+.APimage {
+  display: inline-block;
+  text-decoration: none;
+  color: #222;
+  white-space: nowrap;
+  height: 18px;
+  width: 80px;
+}
+
+.wordSize {
+  margin-top: 40px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wordColor {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.size {
+  border-color: #222;
+  color: #222;
+  font-weight: 700;
   font: 1.1rem/1.36 helvetica,arial,sans-serif;
   letter-spacing: .04rem;
   color: #767676;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+  min-width: 38px;
+  margin: 0 5px 5px 0;
+  border: 1px solid #aaa;
+  line-height: 1.7;
+  letter-spacing: .04rem;
+  text-align: center;
+}
+
+.size:hover { 
+  color: black;
+  border: 1px solid black;
+}
+
+.color {
+  float: left;
+}
+
+.sizeGuideCont {
+  margin-top: 60px;
+}
+
+.sizeGuide {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #767676;
+}
+
+.colors > * {
+  display: inline-block;
+}
+
+.wordColorPlace {
+  font-size: 15px;
+  color: #767676;
+}
+
+.qtyCont {
+  margin-top: 20px;
+}
+
+.qty {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.qtyOptions {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 95px;
+  height: 45px;
+  background-color: white;
+  color: #767676;
+}
+
+.shipToMe {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 25px;
+  font-size: 12px;
+}
+
+.shipToMeButt{
+  border-radius: 50%;
+  color: white;
+  height: 15px;
+  width: 15px;
+}
+
+.inStorePickUp {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.inStorePickUpButt{
+  border-radius: 50%;
+  color: white;
+  height: 15px;
+  width: 15px;
+}
+
+.addToBag {
+  background-color:#222;
+  color: white;
+  height: 50px;
+  width: 550px;
+  font: 560 1.3rem/1.36 helvetica,arial,sans-serif;
+  text-align: center;
+}
+
+.addButtonCont {
+  margin-top: 30px;
 }

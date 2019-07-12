@@ -6,8 +6,8 @@ const buttonsSchema = new mongoose.Schema({
   id: Number,
   name: String,
   price: String,
-  colors: String,
-  sizes: String,
+  colors: Array,
+  sizes: Array,
   description: String
 }
 );
