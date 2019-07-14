@@ -14,22 +14,20 @@ const Items = (props) => {
                 <p className="words"> {item.price}</p>
                 <div className="AP"> 
                   <p className="afterPay"> Available on orders $35.00–$1,000.00 by afterPay</p>
-                  {/* <input className="APimage" type="image" src="https://kmd-assets.imgix.net/gene-cms/a/p/ap-rgb-sm4x-100_1.jpg?auto=format&fit=crop&q=30&dpr=2&ixlib=imgixjs-3.3.2" /> */}
                 </div>
                 <div className="stars">&#9733; &#9733; &#9733; &#9733; &#9733; 4.7 | 34 Reviews</div>
                 <div className="colors">
                   <p className="wordColor">Color: </p>
-                  <p className="wordColorPlace"> placeholder for color </p>
                 </div>
-                <Colors colors={item.colors}/>
+                <Colors changeColor={props.changeColor} colors={item.colors}/>
                 <p className="wordSize">Size:</p>
-                <Sizes sizes={item.sizes}/>
+                <Sizes changeSize={props.changeSize} sizes={item.sizes}/>
                 <div className="sizeGuideCont">
                     <a className="sizeGuide" href="https://cdn.shopify.com/s/files/1/1230/9232/files/Size_Chart_General_47015b27-860c-43f3-b2aa-0c701038dbe5.png?9407381415185995239">Size Guides</a>
                 </div>
                 <div className="qtyCont">
                     <p className="qty">Qty:</p>
-                    <select className="qtyOptions">
+                    <select onChange={props.changeQty} className="qtyOptions">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -44,7 +42,7 @@ const Items = (props) => {
                 </div>
                 <div className="shipToMe" > <button className="shipToMeButt"> </button> Ship to Me </div>
                 <div className="inStorePickUp" > <button className="inStorePickUpButt"> </button> In-Store Pickup </div>
-                <div className="addButtonCont"> <button className="addToBag"> Add to Bag </button> </div>
+                <div className="addButtonCont"> <button onClick={props.display} onClick={props.addToBag} className="addToBag"> Add to Bag </button> </div>
 
                 <Accordion className="accordion" defaultActiveKey="0">
                   <Card>
@@ -75,6 +73,9 @@ const Items = (props) => {
 }
 
 export default Items;
+
+
+
 
 
 

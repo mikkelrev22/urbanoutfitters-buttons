@@ -14,14 +14,13 @@ app.get('/data/:id', (req, res) => {
   })
 });
 
-// app.post('/data', (req, res) => {
-//   console.log(req.body);
-//   const { color, size, qty } = req.body;
-//   Schema.create({color, size, qty}, (err, data) => {
-//     if (err) res.status(500).send(err);
-//     res.status(200).send(data);
-//   })
-// });
+app.patch('/data/:id', (req, res) => {
+  console.log(req.body)
+  Schema.updateOne({id: req.params.id},{selectedSize:req.body.selectedSize, selectedColor:req.body.selectedColor, selectedQty:req.body.selectedQty }, (err, data) => {
+    if (err) res.status(500).send(err);
+    res.status(200).send(data);
+  })
+})
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);

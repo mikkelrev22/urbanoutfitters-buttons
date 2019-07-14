@@ -57,6 +57,7 @@
 }
 
 .wordColor {
+  margin-top: 23px;
   font-size: 12px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
@@ -94,13 +95,13 @@
   margin: 0 5px 5px 0;
   border-radius: 50%;
   border-color: grey;
-  height: 22px;
-  width: 22px;
+  height: 25px;
+  width: 25px;
   float: left;
 }
 
 .color:hover {
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 .colors > * {
@@ -123,7 +124,7 @@
 }
 
 .qtyCont {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .qty {

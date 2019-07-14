@@ -21,37 +21,37 @@ let randomElement = function(array){
   };
   
   let adjectives = [
-    'attractive',
-    'beautiful',
-    'clean',
-    'dazzling',
-    'elegant',
-    'fancy',
-    'fit',
-    'glamorous',
-    'gorgeous',
-    'handsome',
-    'long',
-    'magnificent',
-    'muscular',
-    'ear',
-    'shapely',
-    'short',
-    'skinny',
-    'stocky'
+    'Attractive',
+    'Beautiful',
+    'Best Friend',
+    'Funny',
+    'Elegant',
+    'Fancy',
+    'Fit',
+    'Glamorous',
+    'Gorgeous',
+    'Buy Me',
+    'Friendly',
+    'Magnificent',
+    'Muscular',
+    'Ear',
+    'Shapely',
+    'Funny',
+    'Yummy',
+    'Delicious'
   ];
   
   let clothing = [
-    'shirt',
+    'Shirt',
     'T-shirt',
-    'blouse',
-    'undies',
-    'tie',
-    'tee',
-    'pants',
-    'skirt',
-    'socks',
-    'dress'
+    'Blouse',
+    'Undies',
+    'Tie',
+    'Tee',
+    'Pants',
+    'Skirt',
+    'Socks',
+    'Dress'
   ];
   
   let prices = [
@@ -111,7 +111,10 @@ let randomElement = function(array){
       price: randomElement(prices),
       colors: getRandom(colors, randomElement([1,2,3])),
       sizes: getRandom(sizes, randomElement([1,2,3])),
-      description: randomElement(descriptions)
+      description: randomElement(descriptions),
+      selectedSize: 'M',
+      selectedColor: 'white',
+      selectedQty: 1
     }
   };
   
@@ -137,8 +140,6 @@ const insertItems = function() {
     };
     Promise.all(promises).then(() => db.disconnect());
 };
-
-
 
 insertItems();
 

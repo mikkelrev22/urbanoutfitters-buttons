@@ -7,7 +7,7 @@ const Sizes = (props) => {
         props.sizes.map((size, i) => {
           return (
             <div className="sizeCont" key={i}>
-              <button className="size">{size}</button>
+              <button onClick={props.changeSize} value={size} className="size">{size}</button>
             </div>
           )
         })

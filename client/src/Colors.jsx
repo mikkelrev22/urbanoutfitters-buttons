@@ -7,8 +7,7 @@ const Colors = (props) => {
         props.colors.map((color, i) => {
           return (
             <div className="colorCont" key={i}>
-              <button className="color"></button>
-              {console.log(color)}
+              <button onClick={props.changeColor} className="color" style={{backgroundColor: color}} value={color} ></button>
             </div>
           )
         })
@@ -16,8 +15,6 @@ const Colors = (props) => {
     </div>
   )
 }
-
-// style={`background-color:${props.color}`}
 
 export default Colors;
 
