@@ -42,8 +42,7 @@ const Items = (props) => {
                 </div>
                 <div className="shipToMe" > <button className="shipToMeButt"> </button> Ship to Me </div>
                 <div className="inStorePickUp" > <button className="inStorePickUpButt"> </button> In-Store Pickup </div>
-                <div className="addButtonCont"> <button onClick={props.display} onClick={props.addToBag} className="addToBag"> Add to Bag </button> </div>
-
+                <div className="addButtonCont"> <button className="addToBag" onClick={props.display} onClick={props.addToBag} onClick > Add to Bag </button> </div>
                 <Accordion className="accordion" defaultActiveKey="0">
                   <Card>
                     <Accordion.Toggle as={Card.Header} eventKey="0">

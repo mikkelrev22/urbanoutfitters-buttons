@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import Items from './Items.jsx';
-import Sizes from './Sizes.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -26,7 +25,7 @@ class App extends React.Component {
     getItem() {
       // let url = parseInt(window.location.pathname.slice(1), 10);
       //axios.get(`/data/${url}`)
-      axios.get('/data/2')
+      axios.get('/data/3')
       .then((response) => {
         console.log(response.data)
         this.setState({
@@ -36,7 +35,7 @@ class App extends React.Component {
     };
 
     updateButtons() {
-      axios.patch('/data/2', {
+      axios.patch('/data/3', {
         selectedSize: this.state.selectedSize,
         selectedColor: this.state.selectedColor,
         selectedQty: this.state.selectedQty
@@ -66,7 +65,6 @@ class App extends React.Component {
 
     componentDidMount() {
       this.getItem();
-
     };
 
     render() {

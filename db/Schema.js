@@ -12,8 +12,7 @@ const buttonsSchema = new mongoose.Schema({
   selectedSize: String,
   selectedColor: String,
   selectedQty: Number
-}
-);
+});
 
 const Buttons = mongoose.model('Buttons', buttonsSchema);
 

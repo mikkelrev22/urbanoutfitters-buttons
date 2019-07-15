@@ -126,12 +126,6 @@ let randomElement = function(array){
     return arr;
   };
 
-  // const options = {
-  //   size: '',
-  //   color: '',
-  //   qty: 1
-  // }
-
 const insertItems = function() {
     const items = fillArray();
     const promises = [];
