@@ -1,7 +1,7 @@
 import React from "react";
 import Colors from "./Colors.jsx";
 import Sizes from "./Sizes.jsx";
-import { Button, Accordion, Card } from 'react-bootstrap';
+import { Accordion, Card } from 'react-bootstrap';
 
 const Items = (props) => {
   return (
@@ -15,7 +15,7 @@ const Items = (props) => {
                 <div className="AP"> 
                   <p className="afterPay"> Available on orders $35.00–$1,000.00 by afterPay</p>
                 </div>
-                <div className="stars">&#9733; &#9733; &#9733; &#9733; &#9733; 4.7 | 34 Reviews</div>
+                <div className="stars">&#9733; &#9733; &#9733; &#9733; &#9733; 5.0 | 34 Reviews</div>
                 <div className="colors">
                   <p className="wordColor">Color: </p>
                 </div>
@@ -42,7 +42,10 @@ const Items = (props) => {
                 </div>
                 <div className="shipToMe" > <button className="shipToMeButt"> </button> Ship to Me </div>
                 <div className="inStorePickUp" > <button className="inStorePickUpButt"> </button> In-Store Pickup </div>
-                <div className="addButtonCont"> <button className="addToBag" onClick={props.display} onClick={props.addToBag} onClick > Add to Bag </button> </div>
+                <div className="addButtonCont"> 
+                  <button className="addToBag" onClick={props.changeVisibility} onClick={props.display} onClick={props.addToBag} > Add to Bag </button> 
+
+                </div>
                 <Accordion className="accordion" defaultActiveKey="0">
                   <Card>
                     <Accordion.Toggle as={Card.Header} eventKey="0">
