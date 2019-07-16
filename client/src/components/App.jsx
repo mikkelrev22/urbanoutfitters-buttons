@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Items from './Items.jsx';
+import AddToBag from './AddToBag.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -20,16 +21,10 @@ class App extends React.Component {
       this.toggleBox = this.toggleBox.bind(this);
     }
 
-    displayItem() {
-      console.log('displays')
-    }
-
     getItem() {
-      // let url = parseInt(window.location.pathname.slice(1), 10);
-      //axios.get(`/data/${url}`)
-      axios.get('/data/4')
+      axios.get(`/data/${window.location.pathname.slice(1)}`)
       .then((response) => {
-        // console.log(response.data)
+        console.log(response.data)
         this.setState({
           data: response.data
           })
@@ -37,14 +32,16 @@ class App extends React.Component {
     };
 
     updateButtons() {
-      axios.patch('/data/4', {
+      axios.patch(`/data/${window.location.pathname.slice(1)}`, {
         selectedSize: this.state.selectedSize,
         selectedColor: this.state.selectedColor,
         selectedQty: this.state.selectedQty
       })
       .then((response) => {
         this.getItem();
+        this.toggleBox();
       })
+      
     }
 
     updateSize(event){
@@ -67,10 +64,8 @@ class App extends React.Component {
 
     toggleBox() {
       this.setState({
-        isEmptyState: false,
         addNormalView: true
       })
-      // this.setState(prevState => ({ isBoxVisible: !prevState.isBoxVisible }));
     };
 
     componentDidMount() {
@@ -78,18 +73,10 @@ class App extends React.Component {
     };
 
     render() {
-      // const { isBoxVisible } = this.state;
       return (
         <div>
-          {/* <Items changeVisibility={this.toggleBox} display={this.displayItem} addToBag={this.updateButtons} changeQty={this.updateQty} changeColor={this.updateColor} changeSize={this.updateSize} data={this.state.data}/>  */}
-          
-          {/* <div className={`box ${isBoxVisible ? "" : "hidden"}`}>
-            <p>I'm the box</p>
-          </div> */}
-          
-          {this.state.isEmptyState && <Items changeVisibility={this.toggleBox} display={this.displayItem} addToBag={this.updateButtons} changeQty={this.updateQty} changeColor={this.updateColor} changeSize={this.updateSize} data={this.state.data}/> }
-          {this.state.addNormalView && <AddToBag/>}
-
+          {this.state.isEmptyState && <Items addToBag={this.updateButtons} changeQty={this.updateQty} changeColor={this.updateColor} changeSize={this.updateSize} data={this.state.data}/> }
+          {this.state.addNormalView && <AddToBag data={this.state.data} changeColor={this.updateColor}/>}
         </div>
       )
     }

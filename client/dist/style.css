@@ -87,10 +87,6 @@
   border: 1px solid black;
 }
 
-/* .colorCont {
-
-} */
-
 .color {
   margin: 0 5px 5px 0;
   border-radius: 50%;
@@ -182,4 +178,32 @@
 
 .accordion{
   margin-top:50px;
+}
+
+.bigBox {
+  height: 300px;
+  width: 220px;
+  border: 1px solid #aaa;
+  background-color: white;
+  margin-top: 30px;
+  position: absolute;
+  right: 1px;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+}
+
+.checkout {
+  background-color:#222;
+  color: white;
+  height: 50px;
+  width: 130px;
+  font: 520 1.3rem/1.36 helvetica,arial,sans-serif;
+  text-align: center;
+}
+
+.quatity {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }

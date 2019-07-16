@@ -43,7 +43,7 @@ const Items = (props) => {
                 <div className="shipToMe" > <button className="shipToMeButt"> </button> Ship to Me </div>
                 <div className="inStorePickUp" > <button className="inStorePickUpButt"> </button> In-Store Pickup </div>
                 <div className="addButtonCont"> 
-                  <button className="addToBag" onClick={props.changeVisibility} onClick={props.display} onClick={props.addToBag} > Add to Bag </button> 
+                  <button className="addToBag" onClick={props.addToBag} > Add to Bag </button> 
 
                 </div>
                 <Accordion className="accordion" defaultActiveKey="0">
