@@ -2,7 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const Schema = require('../db/Schema.js');
 const app = express();
+const cors = require('cors')
 const PORT = 5152;
+app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'));
